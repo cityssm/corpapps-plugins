@@ -1,5 +1,36 @@
 // See bs3-fa4-helpers-README for examples.
 
+
+/*
+ * .form-control-noresize
+ * Removes the resize options from a textarea.
+ */
+
+ .form-control-noresize {
+   resize: none;
+ }
+
+
+/*
+ * .form-control-nospinner
+ * Removes the nuisance spinner (up and down arrow buttons) from a number input field.
+ */
+
+//sass-lint:disable no-vendor-prefixes
+.form-control-nospinner {
+	-moz-appearance: textfield;
+
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+}
+//sass-lint:enable no-vendor-prefixes
+
+
 /*
  * .fa-rotate-animate
  * Used alongside Bootstrap 3's collapse and dropdown plugins.
@@ -10,7 +41,6 @@
 .fa-rotate-animate {
 	transition: transform 250ms;
 }
-
 
 [data-toggle='dropdown'],
 [data-toggle='collapse'] {

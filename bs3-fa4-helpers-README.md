@@ -3,13 +3,33 @@
 Some additional CSS used in the City's corporate application that ties together
 Bootstrap 3 and Font Awesome 4.
 
+
+## .form-control-noresize
+
+Removes the resize option from a textarea.
+
+```html
+<textarea class="form-control form-control-noresize"></textarea>
+```
+
+## .form-control-nospinner
+
+Removes the nuisance spinner (up and down arrow buttons) from a number input field.
+
+**Sample Usage HTML**
+
+```html
+<input class="form-control form-control-nospinner" type="number" />
+```
+
+
 ## .fa-rotate-animate
 
 Used alongside Bootstrap 3's collapse and dropdown plugins.
 When the dropdown is expanded, the right caret rotates 90 degrees to point down.
 Simply include the ```.fa-rotate-animate``` class on the icon inside the toggle button.
 
-**Dropdown Sample HTML**
+**Sample Dropdown Usage HTML**
 
 ```html
 <div class="btn-group">
@@ -25,7 +45,7 @@ Simply include the ```.fa-rotate-animate``` class on the icon inside the toggle 
 </div>
 ```
 
-**Collapse Sample HTML**
+**Sample Collapse Usage HTML**
 
 ```html
 <div class="panel panel-default">
