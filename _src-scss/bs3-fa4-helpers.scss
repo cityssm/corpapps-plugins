@@ -2,6 +2,22 @@
 
 
 /*
+ * Automatically highlights a form-control with invalid input.
+ * Similar to including .has-error on the parent .form-group.
+ */
+
+$bs3-state-danger-text: #a94442;
+$bs3-state-danger-bg:   #f2dede;
+
+.form-control-highlight-invalid {
+  &:invalid {
+    color: $bs3-state-danger-text;
+    background-color: $bs3-state-danger-bg;
+  }
+}
+
+
+/*
  * .form-control-noresize
  * Removes the resize options from a textarea.
  */

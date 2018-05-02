@@ -3,6 +3,20 @@
 Some additional CSS used in the City's corporate application that ties together
 Bootstrap 3 and Font Awesome 4.
 
+Note that our application uses vanilla Bootstrap, so some theming may be required. 
+
+
+## .form-control-highlight-invalid
+
+Automatically highlights a form-control with invalid input.
+Similar to including ```.has-error``` on the parent ```.form-group```.
+
+*May require some color changes to fit your theme.*
+
+```html
+<input class="form-control form-control-highlight-invalid" type="number" min="0" step="1" />
+```
+
 
 ## .form-control-noresize
 
