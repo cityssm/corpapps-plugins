@@ -2,6 +2,44 @@
 
 
 /*
+ * .alert-absolute-bottom, .alert-fixed-bottom
+ * Sticks an alert to the the bottom of the page or the browser window.
+ */
+
+.alert-absolute-bottom,
+.alert-fixed-bottom {
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	padding: 10px;
+	margin: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 0;
+	border-radius: 0;
+}
+
+.alert-fixed-bottom {
+	position: fixed;
+}
+
+.alert-absolute-bottom {
+	position: absolute;
+}
+
+
+
+
+/*-----------------*\
+    FORM CONTROLS
+\*-----------------*/
+
+
+
+
+
+/*
  * Automatically highlights a form-control with invalid input.
  * Similar to including .has-error on the parent .form-group.
  */

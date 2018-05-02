@@ -3,12 +3,23 @@
 Some additional CSS used in the City's corporate application that ties together
 Bootstrap 3 and Font Awesome 4.
 
-Note that our application uses vanilla Bootstrap, so some theming may be required. 
+Note that our application uses vanilla Bootstrap, so some theming may be required.
+
+
+## .alert-absolute-bottom, .alert-fixed-bottom
+
+Sticks an alert to the the bottom of the page or the browser window.
+
+```html
+<div class="alert alert-warning alert-fixed-bottom">
+  You have unsaved changes.
+</div>
+```
 
 
 ## .form-control-highlight-invalid
 
-Automatically highlights a form-control with invalid input.
+Automatically highlights a form-control with invalid input using the `:invalid` CSS selector.
 Similar to including ```.has-error``` on the parent ```.form-group```.
 
 *May require some color changes to fit your theme.*
@@ -29,8 +40,6 @@ Removes the resize option from a textarea.
 ## .form-control-nospinner
 
 Removes the nuisance spinner (up and down arrow buttons) from a number input field.
-
-**Sample Usage HTML**
 
 ```html
 <input class="form-control form-control-nospinner" type="number" />
