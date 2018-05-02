@@ -1,0 +1,20 @@
+// See bs3-fa4-helpers-README for examples.
+
+/*
+ * .fa-rotate-animate
+ * Used alongside Bootstrap 3's collapse and dropdown plugins.
+ * When the dropdown is expanded, the right caret rotates 90 degrees to point down.
+ * Simply include the .fa-rotate-animate class on the icon inside the toggle button.
+ */
+
+.fa-rotate-animate {
+	transition: transform 250ms;
+}
+
+
+[data-toggle='dropdown'],
+[data-toggle='collapse'] {
+	&[aria-expanded='true'] .fa-rotate-animate {
+		transform: rotate(90deg);
+	}
+}
