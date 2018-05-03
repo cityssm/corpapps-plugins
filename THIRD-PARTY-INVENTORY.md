@@ -24,6 +24,7 @@ and are limited to the browsers on City-issued devices.
 *Mainly to stay current while preserving Internet Explorer 11 support, but also older Android phones.*
 
 - [Array.prototype.find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Polyfill)
+- [Element.prototype.closest](https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill)
 - [window.fetch](https://github.com/github/fetch)
 - [window.Promise](https://github.com/taylorhakes/promise-polyfill)
 - [window.URLSearchParams](https://github.com/WebReflection/url-search-params)
