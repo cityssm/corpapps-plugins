@@ -1,11 +1,8 @@
 // See bs3-fa4-helpers-README for examples.
-
-
 /*
  * .alert-absolute-bottom, .alert-fixed-bottom
  * Sticks an alert to the the bottom of the page or the browser window.
  */
-
 .alert-absolute-bottom,
 .alert-fixed-bottom {
 	right: 0;
@@ -27,49 +24,33 @@
 .alert-absolute-bottom {
 	position: absolute;
 }
-
-
-
-
 /*-----------------*\
     FORM CONTROLS
 \*-----------------*/
-
-
-
-
-
 /*
  * Automatically highlights a form-control with invalid input.
  * Similar to including .has-error on the parent .form-group.
  */
-
 $bs3-state-danger-text: #a94442;
-$bs3-state-danger-bg:   #f2dede;
+$bs3-state-danger-bg: #f2dede;
 
 .form-control-highlight-invalid {
-  &:invalid {
-    color: $bs3-state-danger-text;
-    background-color: $bs3-state-danger-bg;
-  }
+	&:invalid {
+		color: $bs3-state-danger-text;
+		background-color: $bs3-state-danger-bg;
+	}
 }
-
-
 /*
  * .form-control-noresize
  * Removes the resize options from a textarea.
  */
-
- .form-control-noresize {
-   resize: none;
- }
-
-
+.form-control-noresize {
+	resize: none;
+}
 /*
  * .form-control-nospinner
  * Removes the nuisance spinner (up and down arrow buttons) from a number input field.
  */
-
 //sass-lint:disable no-vendor-prefixes
 .form-control-nospinner {
 	-moz-appearance: textfield;
@@ -84,14 +65,24 @@ $bs3-state-danger-bg:   #f2dede;
 }
 //sass-lint:enable no-vendor-prefixes
 
+.panel-no-box {
+	border: 0;
+	box-shadow: none;
 
+	> .panel-body,
+	 > .panel-collapse > .panel-body,
+	> .panel-heading {
+		padding-right: 0;
+		padding-left: 0;
+		background-color: transparent;
+	}
+}
 /*
  * .fa-rotate-animate
  * Used alongside Bootstrap 3's collapse and dropdown plugins.
  * When the dropdown is expanded, the right caret rotates 90 degrees to point down.
  * Simply include the .fa-rotate-animate class on the icon inside the toggle button.
  */
-
 .fa-rotate-animate {
 	transition: transform 250ms;
 }
@@ -102,3 +93,67 @@ $bs3-state-danger-bg:   #f2dede;
 		transform: rotate(90deg);
 	}
 }
+/*
+ * .label-fa
+ * Use Font Awesome icons for radio buttons and checkboxes.
+ */
+
+$bs3-list-group-hover-bg: #f5f5f5;
+$bs3-text-muted: #777;
+
+//sass-lint:disable no-qualifying-elements, force-pseudo-nesting
+
+.label-fa,
+label.list-group-item {
+
+	font-weight: normal;
+	cursor: pointer;
+
+	// Markup can be inside an element (like a disabled checkbox div, or disabled can be applied to the label itself)
+	.disabled &,
+	&.disabled {
+		cursor: not-allowed;
+	}
+
+	// if using a checkbox container for the padding, remove the left padding
+	.checkbox & {
+		padding-left: 0;
+	}
+
+	// hide the checkbox or radio input element
+	input[type='checkbox'],
+	input[type='radio'] {
+		position: absolute;
+		visibility: hidden;
+	}
+
+	.radio-fa {
+		vertical-align: middle;
+	}
+
+	input[type='checkbox']:checked ~ .radio-fa,
+	input[type='radio']:checked ~ .radio-fa {
+		// outlined circle to circle with checkmark
+		&.fa-circle-o::before {
+			content: '\f05d';
+		}
+		// outlined square to square with checkmark
+		&.fa-square-o::before {
+			content: '\f14a';
+		}
+	}
+
+	// if input is disabled
+	input[type='checkbox']:disabled ~ .radio-fa,
+	input[type='radio']:disabled ~ .radio-fa {
+		color: $bs3-text-muted;
+		cursor: not-allowed;
+	}
+}
+
+// Specific to label list groups
+label.list-group-item:hover {
+	background-color: $bs3-list-group-hover-bg;
+}
+
+//sass-lint:enable no-qualifying-elements, force-pseudo-nesting

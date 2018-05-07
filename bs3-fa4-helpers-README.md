@@ -90,3 +90,19 @@ Simply include the ```.fa-rotate-animate``` class on the icon inside the toggle 
   </div>
 </div>
 ```
+
+## .label-fa
+
+Replaces the standard HTML input checkbox or radio button with a Font Awesome icon.
+
+*Styling automatically applies to `label.list-group-item`.*
+
+**Sample HTML**
+
+```html
+<label class="label-fa">
+  <input type="checkbox" />
+  <span class="fa fa-fw fa-lg fa-square-o radio-fa"></span>
+  Remember Me
+</label>
+```
