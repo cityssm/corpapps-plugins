@@ -24,6 +24,8 @@
 .alert-absolute-bottom {
 	position: absolute;
 }
+
+
 /*-----------------*\
     FORM CONTROLS
 \*-----------------*/
@@ -70,7 +72,7 @@ $bs3-state-danger-bg: #f2dede;
 	box-shadow: none;
 
 	> .panel-body,
-	 > .panel-collapse > .panel-body,
+	> .panel-collapse > .panel-body,
 	> .panel-heading {
 		padding-right: 0;
 		padding-left: 0;
@@ -157,3 +159,27 @@ label.list-group-item:hover {
 }
 
 //sass-lint:enable no-qualifying-elements, force-pseudo-nesting
+
+
+/*---------------------------------*\
+    TABBED LIST GROUPS IN A PANEL
+\*---------------------------------*/
+/*
+ * Adjust margins and borders for list-group elements used as tab-panes inside of panels.
+ * Modelled after styles applied to list-group divs that appear inside panel-collapse divs.
+ */
+.panel > .tab-content > .list-group  {
+
+	margin-bottom: 0;
+
+	.list-group-item:last-child {
+		border-bottom: 0;
+		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+
+	.list-group-item {
+		border-width: 1px 0;
+		border-radius: 0;
+	}
+}

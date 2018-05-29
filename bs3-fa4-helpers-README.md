@@ -106,3 +106,41 @@ Replaces the standard HTML input checkbox or radio button with a Font Awesome ic
   Remember Me
 </label>
 ```
+
+## .panel > .tab-content > .list-group
+
+Adjust margins and borders for ```.list-group``` elements used as ```.tab-pane``` s inside of ```.panel``` s.
+Modelled after styles applied to ```.list-group``` divs that appear inside ```.panel-collapse``` divs.
+
+**Sample HTML**
+
+```html
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Panel Title</h2>
+  </div>
+  <div class="panel-body">
+    <ul class="nav nav-pills" role="tablist">
+      <li class="active" role="presentation">
+        <a data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1">Tab 1</a>
+      </li>
+      <li role="presentation">
+        <a data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2">Tab 2</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="tab-pane list-group active" id="tab-1" role="tabpanel">
+      <div class="list-group-item"></div>
+      <div class="list-group-item"></div>
+      <div class="list-group-item"></div>
+    </div>
+    <div class="tab-pane list-group" id="tab-2" role="tabpanel">
+      <div class="list-group-item"></div>
+      <div class="list-group-item"></div>
+      <div class="list-group-item"></div>
+    </div>
+  </div>
+</div>
+</div>
+```
