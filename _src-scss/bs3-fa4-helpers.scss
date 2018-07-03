@@ -117,8 +117,9 @@ label.list-group-item {
 		cursor: not-allowed;
 	}
 
-	// if using a checkbox container for the padding, remove the left padding
-	.checkbox & {
+	// if using a checkbox or radio container for the padding, remove the left padding
+	.checkbox &,
+	.radio & {
 		padding-left: 0;
 	}
 
@@ -159,6 +160,26 @@ label.list-group-item:hover {
 }
 
 //sass-lint:enable no-qualifying-elements, force-pseudo-nesting
+
+
+/*-------------------------*\
+    SCROLLING LIST GROUPS
+\*-------------------------*/
+
+.list-group-scrollable {
+	max-height: 80vh;
+	overflow: auto;
+
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+
+	//border-bottom: 1px solid #ddd;
+
+	.list-group-item:last-child {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
 
 
 /*---------------------------------*\
